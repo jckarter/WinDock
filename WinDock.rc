@@ -1,0 +1,223 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_WINDOCK             ICON                    "WinDock.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DOCKOPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        VERTGUIDE, 15
+        VERTGUIDE, 98
+        VERTGUIDE, 102
+        VERTGUIDE, 107
+        VERTGUIDE, 132
+        VERTGUIDE, 175
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+        HORZGUIDE, 20
+        HORZGUIDE, 59
+        HORZGUIDE, 86
+        HORZGUIDE, 91
+        HORZGUIDE, 148
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DOCKOPTIONS DIALOGEX 0, 0, 212, 177
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Dock Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,48,156,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,102,156,50,14
+    PUSHBUTTON      "&Apply",IDC_APPLY,155,156,50,14
+    CONTROL         "&Left",IDC_DOCKLEFT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,19,68,29,10
+    CONTROL         "&Right",IDC_DOCKRIGHT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,56,68,33,10
+    CONTROL         "",IDC_BUTTONSIZE,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_TOP | WS_TABSTOP,107,60,92,21,WS_EX_TRANSPARENT
+    CONTROL         "Confirm deletion of dock buttons",IDC_CONFIRM_DELETE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,104,120,10
+    CONTROL         "Confirm replacement of dock button contents",
+                    IDC_CONFIRM_REPLACE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,118,160,10
+    CONTROL         "Confirm WinDock exit",IDC_CONFIRM_EXIT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,132,83,10
+    GROUPBOX        "Dock Side",IDC_STATIC,7,7,91,79
+    GROUPBOX        "Button Size",IDC_STATIC,102,7,103,79
+    CONTROL         139,IDC_DOCKIMAGE,"Static",SS_BITMAP,23,20,56,39,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "",IDC_SHOWBUTTONSIZE,132,20,43,39,BS_ICON | WS_DISABLED | 
+                    NOT WS_TABSTOP
+    GROUPBOX        "Confirmations",IDC_STATIC,7,91,198,57
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_CONTEXTS MENU 
+BEGIN
+    POPUP "Dock Buttons"
+    BEGIN
+        MENUITEM "&Open",                       ID_DOCKBUTTONS_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Select File...",             ID_DOCKBUTTONS_SELECTFILE
+        MENUITEM "&Delete",                     ID_DOCKBUTTONS_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties...",              ID_DOCKBUTTONS_PROPERTIES
+    END
+    POPUP "Header Button"
+    BEGIN
+        MENUITEM "&Options...",                 ID_HEADERBUTTON_OPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_HEADERBUTTON_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "WinDock.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_DOCKRIGHT           BITMAP                  "DockRight.bmp"
+IDB_DOCKLEFT            BITMAP                  "DockLeft.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Joe Groff"
+            VALUE "FileDescription", "WinDock Application Launcher"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "WinDock"
+            VALUE "LegalCopyright", "Copyright (C) 2003 Joe Groff."
+            VALUE "OriginalFilename", "WinDock.exe"
+            VALUE "ProductName", " WinDock Application Launcher"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
